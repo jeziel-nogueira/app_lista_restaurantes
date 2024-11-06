@@ -29,7 +29,7 @@ Este é um aplicativo desenvolvido em Flutter para gerenciamento de restaurantes
    $ flutter pub get
 
 3. Configure o Firebase:
-- Crie um projeto no Firebase Console.
+- Crie um projeto no [Firebase Console](https://firebase.google.com/docs/flutter/setup?hl=pt-br&platform=ios).
 - Adicione seu aplicativo ao Firebase e baixe o arquivo google-services.json para Android ou GoogleService-Info.plist para iOS.
 - Coloque o arquivo de configuração na pasta do projeto conforme indicado pela documentação do Firebase.
 
@@ -45,3 +45,6 @@ Este é um aplicativo desenvolvido em Flutter para gerenciamento de restaurantes
 ![Screenshot_20241105_232203](https://github.com/user-attachments/assets/bd56a033-988a-40a1-92e8-1f9d472ead15)
 ![Screenshot_20241105_232239](https://github.com/user-attachments/assets/7b4dff4a-a3e2-4cc4-a12a-75297b86069a)
 ![Screenshot_20241105_232256](https://github.com/user-attachments/assets/ee74122e-7191-4fcf-abcf-8efd9b14d2f1)
+
+## Licença:
+Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
