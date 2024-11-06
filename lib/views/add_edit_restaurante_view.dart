@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/restaurant_model.dart'; // Importa o modelo do restaurante
@@ -23,6 +24,9 @@ class _AddEditRestaurantPageState extends State<AddEditRestaurantPage> {
   Widget build(BuildContext context) {
     // Obtém o ViewModel para manipular dados do restaurante
     final restaurantViewModel = Provider.of<RestaurantViewModel>(context, listen: false);
+
+    // Obtendo o uid do usuário atual autenticado
+    final userId = FirebaseAuth.instance.currentUser?.uid;
 
     return SafeArea(
       child: Scaffold(
@@ -98,12 +102,12 @@ class _AddEditRestaurantPageState extends State<AddEditRestaurantPage> {
                           if (widget.restaurant == null) {
                             // Se não existe restaurante, adiciona um novo
                             await restaurantViewModel.addRestaurant(
-                              RestaurantModel(id: '', title: title, description: description, type: type),
+                              RestaurantModel(id: '', title: title, description: description, type: type, userId: userId!),
                             );
                           } else {
                             // Se existe restaurante, atualiza o existente
                             await restaurantViewModel.updateRestaurant(
-                              RestaurantModel(id: widget.restaurant!.id, title: title, description: description, type: type),
+                              RestaurantModel(id: widget.restaurant!.id, title: title, description: description, type: type, userId: userId!),
                             );
                           }
                           // Exibe uma mensagem de sucesso

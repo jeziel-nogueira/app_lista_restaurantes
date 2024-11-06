@@ -125,7 +125,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
       body: Column(children: [
         SizedBox(height: 20,),
         Expanded(child: StreamBuilder<List<RestaurantModel>>(
-          stream: restaurantViewModel.getRestaurants(), // Obtém a lista de restaurantes
+          stream: restaurantViewModel.getUserRestaurants(), // Obtém a lista de restaurantes
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator()); // Indicador de carregamento
