@@ -77,8 +77,8 @@ class _LoginViewState extends State<LoginView> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          const Text(
-                            'Set your text to save:',
+                          Text(
+                            (login)? 'Entrar':'Criar Conta',
                             style: TextStyle(fontSize: 18),
                           ),
                           _buildTextField(
