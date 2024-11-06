@@ -61,7 +61,8 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                 String username = user?.displayName ?? 'Nome não disponível';
                 String email = user?.email ?? 'Email não disponível';
 
-                return ListView(
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     // Exibe informações do usuário no Drawer
                     Container(
@@ -115,6 +116,8 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                         },
                       ),
                     ),
+                    SizedBox(height: 1,),
+                    SizedBox(height: 1,)
                   ],
                 );
               },
