@@ -33,7 +33,8 @@ Este é um aplicativo desenvolvido em Flutter para gerenciamento de restaurantes
 - Adicione seu aplicativo ao Firebase e baixe o arquivo google-services.json para Android ou GoogleService-Info.plist para iOS.
 - Coloque o arquivo de configuração na pasta do projeto conforme indicado pela documentação do Firebase.
 
-4. Execute o aplicativo: Após configurar o Firebase, execute o aplicativo com o comando:
+4. Execute o aplicativo:
+   Após configurar o Firebase, execute o aplicativo com o comando:
    ```bash
    $ flutter run
 
